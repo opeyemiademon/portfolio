@@ -43,3 +43,4 @@ front/.env*
 front/node_modules
 old/
 hotel/
+positivus/node_modules
