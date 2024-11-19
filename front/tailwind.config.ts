@@ -1,5 +1,16 @@
 import type { Config } from "tailwindcss";
 const colors = require("tailwindcss/colors")
+const plugin = require("tailwindcss/plugin")
+const rotateY = plugin(function ({addUtilities}:any){
+  addUtilities({
+    '.rotate-y-180':{
+      transform:'rotateY(180deg)'
+    },
+    '.-rotate-y-180':{
+      transform:'rotateY(-180deg)'
+    }
+  })
+})
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -35,6 +46,14 @@ const config: Config = {
       }, */
       darkMode: 'class',
       colors:{
+        "color-primary":"#01051e",
+        "color-primary-light":"#020726",
+        "color-primary-dark":"#010417",
+        "color-secondary":"#ff7d3b",
+        "color-gray":"#333",
+        "color-white":"#fff",
+        "color-blob":"#A427DF",
+
         primaryColor:'#010a5e',
         primaryColorLight:'#010d78',
         secondaryColor:'#FFCC00',
@@ -57,6 +76,6 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [rotateY],
 };
 export default config;

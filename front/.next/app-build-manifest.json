@@ -11,6 +11,16 @@
       "static/chunks/main-app.js",
       "static/css/app/burger/page.css",
       "static/chunks/app/burger/page.js"
+    ],
+    "/light/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/light/page.js"
+    ],
+    "/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/profile/page.js"
     ]
   }
 }

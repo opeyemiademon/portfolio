@@ -1,4 +1,6 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/burger/page": "app/burger/page.js"
+  "/light/page": "app/light/page.js",
+  "/burger/page": "app/burger/page.js",
+  "/profile/page": "app/profile/page.js"
 }

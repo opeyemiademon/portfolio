@@ -1,4 +1,4 @@
-const hamburger =  document.getElementById('hamburger')
+/* const hamburger =  document.getElementById('hamburger')
 const navMemu  = document.getElementById('nav-menu')
 const closeIcon  = document.getElementById('nav-close');
 const navLink = document.querySelectorAll(".nav__link")
@@ -77,11 +77,14 @@ const scrollHeader = () =>{
     }
 }
 
-window.addEventListener("scroll", scrollHeader)
+window.addEventListener("scroll", scrollHeader) */
+
+
 
 /* Dark theme */
 
-const html = document.querySelector('html')
+
+/* const html = document.querySelector('html')
 const themeBtn = document.getElementById('theme-toggle')
 if(localStorage.getItem('mode')=='dark'){
 darkMode()
@@ -151,4 +154,79 @@ sr.reveal('.about__img', { origin:'bottom' });
 sr.reveal('.about_content', { origin:'top' });
 sr.reveal('.menu__items', { origin:'left' });
 sr.reveal('.customer__review', { origin:'right' });
-sr.reveal('.footer');
+sr.reveal('.footer'); */
+
+
+
+/* this is for lightcode  */
+const hamburgers =  document.querySelector('#hamburgers');
+const menu =  document.getElementById('menus');
+const faSolid = document.querySelector('.fa-solid');
+const navLinks = document.querySelectorAll(".nav__link")
+
+hamburgers.addEventListener("click", ()=>{
+    menu.classList.toggle('hidden');
+    faSolid.classList.toggle('fa-xmark');
+}) 
+
+navLinks.forEach(link=>
+
+    link.addEventListener("click", ()=>{
+        menu.classList.toggle('hidden');
+        faSolid.classList.toggle('fa-xmark');
+    })
+)
+
+/* testimonial */
+
+const userTexts = document.getElementsByClassName('user-text');
+const userPics = document.getElementsByClassName("user-pic")
+
+function showReview(){
+    for(userPic of userPics){
+        userPic.classList.remove("active-pic")
+    }
+    for(userText of userPics){
+        userText.classList.remove("active-text")
+    }
+
+    let i = Array.from(userPics).indexOf(event.target);
+    userPics[i].classList.add('active-pic')
+    userTexts[i].classList.add('active-text')
+}
+
+const toggleBtn =  document.getElementById('toggleBtn');
+const card_1_front =  document.querySelector('#card_1_front')
+const card_1_back =  document.querySelector('#card_1_back')
+
+const card_2_front =  document.querySelector('#card_2_front')
+const card_2_back =  document.querySelector('#card_2_back')
+
+const card_3_front =  document.querySelector('#card_3_front')
+const card_3_back =  document.querySelector('#card_3_back')
+
+
+toggleBtn.addEventListener('change', ()=>{
+    card_1_front.classList.toggle('-rotate-y-180')
+    card_1_back.classList.toggle('rotate-y-180')
+
+    card_2_front.classList.toggle('-rotate-y-180')
+    card_2_back.classList.toggle('rotate-y-180')
+
+    card_3_front.classList.toggle('-rotate-y-180')
+    card_3_back.classList.toggle('rotate-y-180')
+})
+
+
+const navbar =  document.querySelector('header')
+window.onscroll=()=>{
+    if(window.scrollY>100){
+        navbar.classList.add('bg-color-primary-dark')
+        navbar.classList.add('border-b')
+        navbar.classList.add('border-color-gray')
+    }else{
+        navbar.classList.remove('bg-color-primary-dark')
+        navbar.classList.remove('border-b')
+        navbar.classList.remove('border-color-gray')
+    }
+}

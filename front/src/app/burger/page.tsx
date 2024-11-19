@@ -16,7 +16,7 @@ const Page = () => {
 
     
   return (
-    <>
+    <div className='text-whiteColor bg-primaryColor tracking-wider font-dmsans dark:bg-darkColor'>
 
 <header className='bg-primaryColor dark:bg-darkColor fixed top-0 left-0 w-full z-50' id='header'>
   <nav className='container relative h-14 flex justify-between items-center'>
@@ -52,7 +52,7 @@ const Page = () => {
 <main>
 
     {/* home section  */}
-<section id='home'>
+<section id='home' className='pt-16 pb-4 md:pt-20'>
 
 <div className='container flex flex-col items-center gap-10 md:flex-row '>
 
@@ -95,7 +95,7 @@ const Page = () => {
 
 {/* category section */}
 
-<section id="category">
+<section id="category" className='pt-16 pb-4 md:pt-20'>
     <div className='container flex flex-col gap-5 md:flex-row'>
     {/*     card 1 */}
     <div className='category_card bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1'>
@@ -153,7 +153,7 @@ const Page = () => {
 
 {/* Promo section  */}
 
-<section id="promo">
+<section id="promo" className='pt-16 pb-4 md:pt-20'>
     <div className='container flex flex-col gap-5 lg:gap-10 lg:flex-row ' >
         {/* card 1 */}
         <div className='promo__card-1 dark:bg-darkColorLight bg-primaryColorLight flex flex-col p-5 rounded-lg  md:flex-row md:items-center lg:flex-row-reverse ld:flex-1'>
@@ -181,7 +181,7 @@ const Page = () => {
 </section>
 
 {/* About section */}
-<section id="about">
+<section id="about" className='pt-16 pb-4 md:pt-20'>
     <div className='container flex flex-col gap-10 md:flex-row'>
         <div className='flex-1 about__img'>
             <img src="/img/about.jpg" alt="about" className='rounded-lg' />
@@ -206,7 +206,7 @@ const Page = () => {
 {/* menu */}
 
 
-<section id="menu">
+<section id="menu" className='pt-16 pb-4 md:pt-20'>
     <div className="container">
         <div className='max-w-md mx-auto text-center'>
             <h2 className='section__title'>OUR BEST MENU</h2>
@@ -463,7 +463,7 @@ const Page = () => {
 
 {/* Review section */}
 
-<section id="review" className='bg-primaryColorLight py-20 dark:bg-darkColorLight '>
+<section id="review" className='pt-16 pb-4 md:pt-20 bg-primaryColorLight py-20 dark:bg-darkColorLight '>
 <div className="container customer__review">
 
 <div className='max-w-md mx-auto text-center'>
@@ -640,7 +640,7 @@ const Page = () => {
 
 {/* contact section */}
 
-<section id="contact" className='bg-secondaryColor py-16'>
+<section id="contact" className='pt-16 pb-4 md:pt-20 bg-secondaryColor py-16'>
     <div className='container flex flex-col gap-5 md:items-center md:flex-row'>
         <div className='space-y-4 md:flex-1'>
             <h2 className='section__title text-blackColor'>GET EXCLUSIVE UPDATE</h2>
@@ -656,7 +656,7 @@ const Page = () => {
 
 <footer>
 
-<section className="footer">
+<section className="footer pt-16 pb-4 md:pt-20">
     <div className="container">
         <ul className="grid grid-cols-1 item-center gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
 
@@ -732,7 +732,7 @@ const Page = () => {
 </footer>
 
 <a href="#" className='fixed right-4 bottom-4 bg-secondaryColor shadow-sm inline-block px-4 py-2 rounded-full text-lg text-blackColor z-50 hover:-translate-y-1 ease-in duration-200 '><i className='fa-solid fa-arrow-up'></i></a>
-    </>
+    </div>
   )
 }
 
