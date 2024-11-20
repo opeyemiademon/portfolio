@@ -16,4 +16,16 @@
   .btn-secondary{
     @apply bg-color-dark text-color-white; 
   }
+
+
 } 
+
+
+
+.mask{
+  mask-image: url('/images/cards/vector.svg');
+    -webkit-mask-image: url('/images/cards/vector.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover; 
+}
+
