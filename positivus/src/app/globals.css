@@ -17,6 +17,9 @@
     @apply bg-color-dark text-color-white; 
   }
 
+  .btn-primary{
+    @apply bg-color-primary text-color-dark; 
+  }
 
 } 
 

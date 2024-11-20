@@ -909,51 +909,60 @@ const  Home =()=> {
           </div>
 
 
-<div className="my-10 p-10 bg-color-grey rounded-3xl flex flex-row justify-between">
-          <div>
+<div className="mx-4 md:mx-0  px-5 lg:pr-0 my-10  py-10 bg-color-grey rounded-3xl flex flex-row justify-between gap-5">
+          <div className="lg:w-1/2 w-full">
 
-<div className="flex flex-row items-center gap-10">
-            <div className="flex flex-row gap-2">
-              <input type="checkbox" className=" w-4 h-4 rounded-full bg-color-primary" checked={true} />
-              <label htmlFor="#" className="text-sm">Say Hi</label>
+
+          <div className="flex items-center gap-5">
+            <div className="flex flex-row items-center">
+    <label className="relative flex items-center cursor-pointer" htmlFor="html">
+      <input name="framework" type="radio"  className="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-color-dark checked:border-color-dark transition-all bg-color-white" id="html" />
+      <span className="absolute  bg-color-primary w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      </span>
+    </label>
+    <label className="ml-2  cursor-pointer text-base" htmlFor="html">Say Hi</label>
+    </div>
+ 
+    <div className="flex flex-row items-center">
+    <label className="relative flex items-center cursor-pointer" htmlFor="react">
+      <input name="framework" type="radio" className="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-color-dark bg-color-white checked:border-color-dark transition-all" id="react"  />
+      <span className="absolute bg-color-primary w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      </span>
+    </label>
+    <label className="ml-2  cursor-pointer text-base" >Get a Quote</label>
+  </div>
+  </div>
+
+
+            <div className="my-5">
+              <label htmlFor="" >Name</label>
+              <input type="text" placeholder="Name" className="w-full px-3 rounded-xl text-sm border text-black border-color-dark bg-color-white py-4 outline-none mt-2" />
             </div>
 
-            <div>
-            <label className=" flex cursor-pointer items-center text-sm ">
-    <input  type="checkbox" defaultChecked className=" h-4 w-4 cursor-pointer appearance-none rounded-full border border-color-dark bg-color-white transition-all checked:bg-color-primary checked:ring-color-dark checked:ring-1  mr-1"  /> Get a Quote
-  </label>
-            </div>
-            </div>
 
-
-            <div>
-              <label htmlFor="">Name</label>
-              <input type="text" placeholder="Name" />
+            <div className="my-5">
+              <label htmlFor="" >Email <span>*</span></label>
+              <input type="email" placeholder="Email" className="w-full px-3 rounded-xl text-sm border text-black border-color-dark bg-color-white py-4 outline-none mt-2" />
             </div>
 
 
-            <div>
-              <label htmlFor="">Email <span>*</span></label>
-              <input type="text" placeholder="Email" />
+            <div className="my-5">
+              <label htmlFor="message">Message <span>*</span></label>
+              <textarea name="" id="message" rows={10} placeholder="Message" className="w-full px-3 rounded-xl text-sm border text-black border-color-dark bg-color-white py-2 outline-none mt-2" ></textarea>
             </div>
 
-
-            <div>
-              <label htmlFor="">Message <span>*</span></label>
-              <textarea name="" id="" rows={4} placeholder="Message"></textarea>
-            </div>
-
-            <button>Send Message</button>
+            <button className="btn btn-secondary w-full">Send Message</button>
 
           </div>
 
-<div>
+          <div className="hidden w-1/2 relative overflow-hidden lg:inline-block">
 
-<div>
-<img src="/images/cards/star1.svg" alt="star 1" />
-<img src="/images/cards/star2.svg" alt="star 2" />
-<img src="/images/cards/ring.svg" alt="star 3" />
-</div>
+
+<img src="/images/cards/star1.svg" alt="star 1" className="w-24 h-24 absolute bottom-[10rem] right-[15rem] z-10" />
+<img src="/images/cards/star2.svg" alt="star 2" className="w-[10rem] h-[10rem] absolute top-[10rem]  right-[10rem] z-10" />
+<img src="/images/cards/ring.svg" alt="star 3" className=" left-[300px] relative  -translate-y-52 top-[12rem] " /> 
+
+
 </div>
 
           </div>
@@ -962,7 +971,73 @@ const  Home =()=> {
 </section>
     </main>
     <footer suppressHydrationWarning={true}>
-      <section></section>
+      <section>
+
+          <div className="container mx-auto">
+
+            <div className="p-10 bg-color-black rounded-t-3xl">
+
+<div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row items-center  ">
+
+<img src="/images/logo-white.svg" alt="logo" className="md:w-6 md:h-6 h-5 w-5" />
+<h2 className="text-xl md:text-2xl tracking-wider ml-2 text-color-white">Positivus</h2>
+
+</div>
+              <div>
+                <ul className="text-color-white flex flex-row gap-5">
+                <li ><a href="#" className="border-b-[.5px]">About Us</a></li>
+                <li><a href="#" className="border-b-[.5px]">Services</a></li>
+                <li><a href="#" className="border-b-[.5px]">Use Case</a></li>
+                <li><a href="#" className="border-b-[.5px]">Pricing</a></li>
+                  <li><a href="#"  className="border-b-[.5px]">Blog</a></li>
+                </ul>
+              </div>
+
+<div className="flex flex-row gap-2">
+              <div className="w-5 h-5 rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-linkedin-in text-color-bark text-xs"></i>
+</div>
+
+<div className="w-5 h-5 rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-facebook-f text-color-bark text-xs"></i>
+</div>
+
+<div className="w-5 h-5 rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-twitter text-color-bark text-xs"></i>
+</div>
+              </div>
+</div>
+
+
+<div className="flex flex-row justify-between p-10 items-center">
+
+<div>
+  <h3 className="bg-color-primary w-max md:text-xl text-base  rounded-md p-1 font-semibold mb-5 md:mb-0">Contact us:</h3>
+  <p className="text-base text-color-white mt-5">Email: info@positivus.com</p>
+  <p className="text-base text-color-white mt-4">Phone: 555-567-8901</p>
+  <p className="text-base text-color-white mt-4">Address: 1234 Main St</p>
+  <p className="text-base text-color-white">Moonstone City, Stardust State 12345</p>
+</div>
+
+<div className="bg-[#292A32] rounded-xl py-10 px-6 ">
+  <div className="gap-5 flex flex-row">
+  <input type="text" placeholder="Email" className="outline-none p-3 text-sm px-5 placeholder-white text-color-white rounded-xl border border-color-white bg-transparent" />
+  <button className="btn btn-primary border-none">Subscribe to news</button>
+  </div>
+</div>
+</div>
+
+<div className="border-t border-color-white h-1 w-full"></div>
+
+<div className="flex flex-row gap-10 mt-8">
+  <p className="text-sm text-color-white">@ 2023 Positivus. All Rights Reserved.</p>
+  <a href="#" className="border-b-[.5px] border-color-white text-color-white"> Pricacy Policy</a>
+</div>
+            </div>
+          </div>
+
+      </section>
     </footer>
     
     </>
