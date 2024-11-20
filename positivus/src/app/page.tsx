@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react";
-//import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
+import { motion } from "framer-motion"
 
 const  Home =()=> {
   const [open, setOpen] = useState(1);
@@ -22,14 +23,23 @@ const  Home =()=> {
     <>
  {/*    header section */}
     <header id="header" className="sticky top-0 right-0 left-0 z-50 bg-color-white" suppressHydrationWarning={true}>
-      <nav className="container mx-auto py-5 relative">
+      <nav className="container mx-auto py-3 relative">
 
         <div className="flex flex-row items-center justify-between px-4 lg:px-0">
           <div className="flex flex-row items-center justify-center">
-
+          <motion.div
+  animate={{ rotate: 180 }}
+  transition={{ repeat: Infinity, duration: 2, restSpeed:0.5 }}
+>
             <img src="/images/logo.svg" alt="logo" className="md:w-6 md:h-6 h-5 w-5" />
-            <h2 className="text-xl md:text-2xl tracking-wider ml-2">Positivus</h2>
+            </motion.div>
+            <motion.div
+animate={{ rotate: 360 }}
+transition={{ type: 'spring', damping: 300 }}
+>
 
+            <h2 className="text-xl md:text-3xl tracking-wider ml-2 font-bold">Positivus</h2>
+</motion.div>
           </div>
 
           <div >
@@ -78,26 +88,32 @@ const  Home =()=> {
 
 
     <main suppressHydrationWarning={true}>
-
+    
   {/*     hero section */}
 <section className="px-4 lg:px-0 lg:py-5">
 
         <div className="container mx-auto">
 <div className="flex flex-col md:flex-row items-center justify-center">
-          <div className="md:w-1/2 ">
+<motion.div 
+            initial={{opacity:0, scale:0.5}} 
+            animate={{opacity:1, scale:1}} 
+            transition={{duration:0.5}} className="md:w-1/2 ">
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight  lg:w-4/5">Navigating the digital landscape for success</h2>
 
             <div className="w-full flex md:hidden items-center justify-center">
             <img src="/images/illustration.svg" alt="item 1" className="" />
-          </div>
+            </div>
 
             <p className="py-5 text-sm md:text-base tracking-wider lg:w-4/5 w-full">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
             <button className="btn btn-secondary w-full lg:w-1/2">Book a consultation</button>
-            </div>
+           </motion.div> 
 
-          <div className="hidden md:w-1/2 md:flex items-center justify-center">
+           <motion.div 
+            initial={{opacity:0, scale:0.5}} 
+            animate={{opacity:1, scale:1}} 
+            transition={{duration:0.5}} className="hidden md:w-1/2 md:flex items-center justify-center">
             <img src="/images/illustration.svg" alt="item 1" className="" />
-          </div>
+            </motion.div> 
           </div>
         </div>
       </section>
@@ -975,26 +991,30 @@ const  Home =()=> {
 
           <div className="container mx-auto">
 
-            <div className="p-10 bg-color-black rounded-t-3xl">
+            <div className="p-5 md:p-10 bg-color-black rounded-t-3xl">
 
-<div className="flex flex-row justify-between items-center">
+<div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-row items-center  ">
-
+            <motion.div
+  animate={{ rotate: 180 }}
+  transition={{ repeat: Infinity, duration: 2 }}
+>
 <img src="/images/logo-white.svg" alt="logo" className="md:w-6 md:h-6 h-5 w-5" />
+</motion.div>
 <h2 className="text-xl md:text-2xl tracking-wider ml-2 text-color-white">Positivus</h2>
 
 </div>
-              <div>
-                <ul className="text-color-white flex flex-row gap-5">
-                <li ><a href="#" className="border-b-[.5px]">About Us</a></li>
-                <li><a href="#" className="border-b-[.5px]">Services</a></li>
-                <li><a href="#" className="border-b-[.5px]">Use Case</a></li>
-                <li><a href="#" className="border-b-[.5px]">Pricing</a></li>
-                  <li><a href="#"  className="border-b-[.5px]">Blog</a></li>
+              <div className="mt-5 md:mt-0">
+                <ul className="text-color-white flex flex-col md:flex-row gap-5 items-center md:items-start">
+                <li ><a href="#" className="border-0 md:border-b-[.5px]">About Us</a></li>
+                <li><a href="#" className="border-0 md:border-b-[.5px]">Services</a></li>
+                <li><a href="#" className="border-0 md:border-b-[.5px]">Use Case</a></li>
+                <li><a href="#" className="border-0 md:border-b-[.5px]">Pricing</a></li>
+                  <li><a href="#"  className="border-0 md:border-b-[.5px]">Blog</a></li>
                 </ul>
               </div>
 
-<div className="flex flex-row gap-2">
+<div className="hidden md:flex flex-row gap-2">
               <div className="w-5 h-5 rounded-full bg-color-white flex items-center justify-center cursor-pointer">
   <i className="fa-brands fa-linkedin-in text-color-bark text-xs"></i>
 </div>
@@ -1010,29 +1030,46 @@ const  Home =()=> {
 </div>
 
 
-<div className="flex flex-row justify-between p-10 items-center">
+<div className="flex flex-col md:flex-row justify-between p-5 md:p-10 items-center">
 
-<div>
+<div className="flex md:block flex-col justify-center items-center">
   <h3 className="bg-color-primary w-max md:text-xl text-base  rounded-md p-1 font-semibold mb-5 md:mb-0">Contact us:</h3>
-  <p className="text-base text-color-white mt-5">Email: info@positivus.com</p>
-  <p className="text-base text-color-white mt-4">Phone: 555-567-8901</p>
-  <p className="text-base text-color-white mt-4">Address: 1234 Main St</p>
-  <p className="text-base text-color-white">Moonstone City, Stardust State 12345</p>
+  <p className="text-sm md:text-base text-color-white mt-5">Email: info@positivus.com</p>
+  <p className="text-sm md:text-base text-color-white mt-4">Phone: 555-567-8901</p>
+  <p className="text-sm md:text-base text-color-white mt-4">Address: 1234 Main St</p>
+  <p className="text-sm md:text-base text-color-white">Moonstone City, Stardust State 12345</p>
 </div>
 
-<div className="bg-[#292A32] rounded-xl py-10 px-6 ">
-  <div className="gap-5 flex flex-row">
+<div className="bg-[#292A32] md:rounded-xl rounded-2xl py-10 px-6 mx-2   md:mx-0 mt-5 md:mt-0 w-full md:w-1/2">
+  <div className="gap-5 flex flex-col md:flex-row">
   <input type="text" placeholder="Email" className="outline-none p-3 text-sm px-5 placeholder-white text-color-white rounded-xl border border-color-white bg-transparent" />
   <button className="btn btn-primary border-none">Subscribe to news</button>
   </div>
 </div>
 </div>
 
+
+
+<div className="md:hidden flex flex-row gap-2 justify-center my-5 md:my-0">
+              <div className="w-8 h-8 rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-linkedin-in text-color-bark text-sm"></i>
+</div>
+
+<div className="w-8 h-8  rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-facebook-f text-color-bark text-sm"></i>
+</div>
+
+<div className="w-8 h-8  rounded-full bg-color-white flex items-center justify-center cursor-pointer">
+  <i className="fa-brands fa-twitter text-color-bark text-sm"></i>
+</div>
+              </div>
+
+
 <div className="border-t border-color-white h-1 w-full"></div>
 
-<div className="flex flex-row gap-10 mt-8">
-  <p className="text-sm text-color-white">@ 2023 Positivus. All Rights Reserved.</p>
-  <a href="#" className="border-b-[.5px] border-color-white text-color-white"> Pricacy Policy</a>
+<div className="flex flex-col md:flex-row gap-5 mt-8 justify-center items-center">
+  <p className="text-base md:text-sm text-color-white">@ 2023 Positivus. All Rights Reserved.</p>
+  <a href="#" className="border-none md:border-b-[.5px] border-color-white text-color-white text-base md:text-sm"> Pricacy Policy</a>
 </div>
             </div>
           </div>
@@ -1043,6 +1080,6 @@ const  Home =()=> {
     </>
   );
 }
-export default Home
+//export default Home
 
-//export default dynamic(() => Promise.resolve(Home), { ssr: false });
+export default dynamic(() => Promise.resolve(Home), { ssr: false });
