@@ -18,7 +18,7 @@ export default function RootLayout({
       </head>
       <body >
         {children}
-        <script src="./main.js" > </script>
+     {/*    <script src="./main.js" > </script> */}
       </body>
     </html>
   );

@@ -15,7 +15,8 @@ export default {
       '2xl': '1536px',
     },
     fontFamily:{
-      grotesk: ['Space Grotesk', 'sans-serif']
+      grotesk: ['Space Grotesk', 'sans-serif'],
+      quicksand :["Quicksand", 'sans-serif']
     },
     extend: {
       colors: {
@@ -28,4 +29,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode:'class'
 } satisfies Config;
